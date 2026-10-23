@@ -15,11 +15,14 @@
   from = "/drafts/*"
   to = "/404.html"
   status = 404
+  force = true
 [[redirects]]
   from = "/tools/*"
   to = "/404.html"
   status = 404
+  force = true
 [[redirects]]
   from = "/posts/*"
   to = "/404.html"
   status = 404
+  force = true
