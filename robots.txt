@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /drafts/
+Disallow: /tools/
+Disallow: /posts/
+
+Sitemap: https://sevenriverspsychiatry.com/sitemap.xml

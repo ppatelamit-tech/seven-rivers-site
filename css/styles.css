@@ -1135,3 +1135,8 @@ button.btn { cursor: pointer; -webkit-font-smoothing: antialiased; }
   .gate-split { min-height: 0; }
   .gate-half { min-height: 48vh; }
 }
+
+/* Booking line inside the gate band, above the doors (added for conversion on small screens). */
+.gate-foot-top { margin-top: 1.1rem; margin-bottom: 0; padding: 0; }
+/* The header CTA was inheriting .nav a's grey text over the navy button. */
+.nav a.btn-primary, .nav a.btn-primary:hover { color: var(--btn-fg); }

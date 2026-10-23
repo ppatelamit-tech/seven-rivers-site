@@ -9,3 +9,17 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Keep source/draft folders out of the served site.
+[[redirects]]
+  from = "/drafts/*"
+  to = "/404.html"
+  status = 404
+[[redirects]]
+  from = "/tools/*"
+  to = "/404.html"
+  status = 404
+[[redirects]]
+  from = "/posts/*"
+  to = "/404.html"
+  status = 404

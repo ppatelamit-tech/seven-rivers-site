@@ -127,3 +127,26 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+def build_sitemap():
+    """Regenerate sitemap.xml from every served page."""
+    pages = ["index.html", "home.html", "about.html", "philosophy.html", "services.html",
+             "fees.html", "telehealth.html", "faq.html", "contact.html", "blog/index.html"]
+    pages += sorted("blog/" + os.path.basename(p) for p in glob.glob(os.path.join(BLOG, "*.html"))
+                    if os.path.basename(p) != "index.html")
+    today = date.today().isoformat()
+    lines = ['<?xml version="1.0" encoding="UTF-8"?>',
+             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    for p in pages:
+        loc = SITE + "/" if p == "index.html" else f"{SITE}/{p}"
+        prio = "1.0" if p in ("index.html", "home.html") else ("0.6" if p.startswith("blog/") else "0.8")
+        lines.append(f"  <url><loc>{loc}</loc><lastmod>{today}</lastmod><priority>{prio}</priority></url>")
+    lines.append("</urlset>")
+    with open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8") as f:
+        f.write("\n".join(lines) + "\n")
+    print("built sitemap.xml with", len(pages), "urls")
+
+
+if __name__ == "__main__":
+    build_sitemap()
