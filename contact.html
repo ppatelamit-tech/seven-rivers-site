@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Booking | Seven Rivers Psychiatry</title>
+  <meta name="description" content="Request a free 15-minute consultation with Seven Rivers Psychiatry by email or phone, or send a brief inquiry about fit and availability.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#0B0E1A">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    (function () {
+      var q = new URLSearchParams(location.search).get("path");
+      if (q === "healing" || q === "ascent") { try { localStorage.setItem("srp-path", q); } catch (e) {} }
+      var p;
+      try { p = localStorage.getItem("srp-path"); } catch (e) {}
+      document.documentElement.dataset.path = (p === "healing" || p === "ascent") ? p : "ascent";
+    })();
+  </script>
+  <!-- Analytics (audit step 9): create a free Plausible account, then uncomment:
+  <script defer data-domain="sevenriverspsychiatry.com" src="https://plausible.io/js/script.js"></script> -->
+</head>
+<body>
+  <div class="crisis-strip" role="note">In crisis? Call or text <a href="tel:988">988</a>, or call <a href="tel:911">911</a>.</div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="home.html">Seven Rivers <span class="wm-rule">Psychiatry</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="philosophy.html">Philosophy</a>
+        <a href="services.html">Services</a>
+        <a href="fees.html">Fees</a>
+        <a href="telehealth.html">Telehealth</a>
+        <a href="blog/index.html">Writing</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+        <div class="path-switch" role="group" aria-label="Choose your current">
+          <button type="button" data-set="healing">Healing</button>
+          <button type="button" data-set="ascent">Ascent</button>
+        </div>
+        <a class="btn btn-primary" href="/contact.html#book">Book your free consultation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Contact</p>
+        <h1>Reach the <span class="display-em">practice</span></h1>
+        <p class="lede">Booking happens through the secure patient portal. For everything else, email and phone are below.</p>
+      </div>
+    </section>
+
+    <section class="section-tight" style="padding-top: var(--space-2);">
+      <div class="wrap">
+        <div class="notice notice-crisis" style="max-width:none;">
+          <strong>In a crisis, do not wait for a reply.</strong> If you are having thoughts of harming yourself or someone else, or are experiencing a psychiatric emergency, call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline), call <strong>911</strong>, or go to your nearest emergency room. In Connecticut you can also call 211 for mobile crisis services.
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tight" id="book">
+      <div class="wrap">
+        <div class="form-card">
+          <h2>Request your free 15-minute consultation</h2>
+          <p class="cred-strip">Amit Patel, MD &middot; Board Certified, ABPN &middot; Connecticut licensed</p>
+          <p class="form-intro">Four short questions, about 2 minutes. No health details here, just scheduling; clinical matters stay inside HIPAA-secured visits.</p>
+          <form name="consultation" method="POST" action="/contact.html?sent=1" data-netlify="true" netlify-honeypot="bot-field" class="consult-form" id="consult-form">
+            <input type="hidden" name="form-name" value="consultation">
+            <p class="hidden-field"><label>Leave this empty: <input name="bot-field"></label></p>
+            <label for="cf-name">Name</label>
+            <span class="field-why">So we know what to call you.</span>
+            <input id="cf-name" name="name" type="text" required autocomplete="name">
+            <label for="cf-email">Email</label>
+            <span class="field-why">Where your confirmation and scheduling options go.</span>
+            <input id="cf-email" name="email" type="email" required autocomplete="email">
+            <label for="cf-phone">Phone <span class="field-opt">(optional)</span></label>
+            <span class="field-why">Only if you would rather get a call back.</span>
+            <input id="cf-phone" name="phone" type="tel" autocomplete="tel">
+            <label for="cf-times">Preferred times</label>
+            <span class="field-why">Mornings, evenings, weekends; anything helps.</span>
+            <input id="cf-times" name="times" type="text">
+            <p style="margin-top: var(--space-3);"><button class="btn btn-primary btn-lg" type="submit">Send consultation request</button></p>
+          </form>
+          <div class="form-sent" id="form-sent" hidden>
+            <h3>Received.</h3>
+            <p>You will hear from the practice within one business day at the email you provided. If anything feels urgent tonight, 988 is at the top and bottom of this page.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="wrap">
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>General inquiries</h3>
+            <p>Questions about fit, availability, or fees before booking: <a href="mailto:connect@sevenriverspsychiatry.com">connect@sevenriverspsychiatry.com</a></p>
+            <p style="margin-top:0.8rem;"><strong>Please do not include clinical details or health information in email.</strong> Email is not a secure channel; clinical matters belong in the portal or a visit.</p>
+          </div>
+          <div class="card">
+            <h3>Phone</h3>
+            <p><a href="tel:+19592594242">(959) 259-4242</a></p>
+            <p style="margin-top:0.8rem;">Calls are returned within one business day. Existing patients should use the portal for anything clinical, including refill requests.</p>
+          </div>
+        </div>
+
+        <div class="prose" style="margin-top: var(--space-4);">
+          <h2>Practice details</h2>
+          <p>Seven Rivers Psychiatry PLLC<br>Correspondence: 2389 Main St., STE 100, Glastonbury, CT 06033<br>Serving adults throughout Connecticut by telehealth.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-wordmark">Seven Rivers Psychiatry</p>
+          <p style="font-size:0.95rem; max-width:32ch;">Telehealth psychiatry for adults across Connecticut. Thorough evaluation, thoughtful prescribing, care with continuity.</p>
+        </div>
+        <div>
+          <h4>Practice</h4>
+          <ul>
+            <li><a href="philosophy.html">Treatment philosophy</a></li>
+            <li><a href="services.html">Services &amp; conditions</a></li>
+            <li><a href="fees.html">Fees &amp; policies</a></li>
+            <li><a href="telehealth.html">How telehealth works</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Patients</h4>
+          <ul>
+            <li><a href="/contact.html#book">Book your free consultation</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog/index.html">Writing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:connect@sevenriverspsychiatry.com">connect@sevenriverspsychiatry.com</a></li>
+            <li><a href="tel:+19592594242">(959) 259-4242</a></li>
+            <li>Licensed in Connecticut</li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-crisis"><strong>If you are in crisis:</strong> Seven Rivers Psychiatry is not an emergency service. If you are experiencing a mental health emergency, call or text 988 (Suicide &amp; Crisis Lifeline), call 911, or go to your nearest emergency room.</p>
+      <p class="footer-legal">&copy; 2026 Seven Rivers Psychiatry PLLC. All rights reserved. &middot; <a href="fees.html#gfe">Good Faith Estimate notice</a> &middot; This website does not provide medical advice and does not create a doctor-patient relationship.</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
