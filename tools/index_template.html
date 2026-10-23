@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Writing | Seven Rivers Psychiatry</title>
+  <meta name="description" content="Essays on psychiatry, diagnosis, and medication from Seven Rivers Psychiatry.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#0B0E1A">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script>
+    (function () {
+      var q = new URLSearchParams(location.search).get("path");
+      if (q === "healing" || q === "ascent") { try { localStorage.setItem("srp-path", q); } catch (e) {} }
+      var p;
+      try { p = localStorage.getItem("srp-path"); } catch (e) {}
+      document.documentElement.dataset.path = (p === "healing" || p === "ascent") ? p : "ascent";
+    })();
+  </script>
+  <!-- Analytics (audit step 9): create a free Plausible account, then uncomment:
+  <script defer data-domain="sevenriverspsychiatry.com" src="https://plausible.io/js/script.js"></script> -->
+</head>
+<body>
+  <div class="crisis-strip" role="note">In crisis? Call or text <a href="tel:988">988</a>, or call <a href="tel:911">911</a>.</div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="../home.html">Seven Rivers <span class="wm-rule">Psychiatry</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="../philosophy.html">Philosophy</a>
+        <a href="../services.html">Services</a>
+        <a href="../fees.html">Fees</a>
+        <a href="../telehealth.html">Telehealth</a>
+        <a href="../blog/index.html" aria-current="page">Writing</a>
+        <a href="../about.html">About</a>
+        <a href="../faq.html">FAQ</a>
+        <div class="path-switch" role="group" aria-label="Choose your current">
+          <button type="button" data-set="healing">Healing</button>
+          <button type="button" data-set="ascent">Ascent</button>
+        </div>
+        <a class="btn btn-primary" href="/contact.html#book">Book your free consultation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Writing</p>
+        <h1>Notes from the <span class="display-em">confluence</span></h1>
+        <p class="lede">Occasional essays on how psychiatry works, how it fails, and how to be a good steward of your own mind. Written for patients and curious readers, not for colleagues.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: var(--space-2);">
+      <div class="wrap">
+        <div class="post-list">
+{{cards}}
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-wordmark">Seven Rivers Psychiatry</p>
+          <p style="font-size:0.95rem; max-width:32ch;">Telehealth psychiatry for adults across Connecticut. Thorough evaluation, thoughtful prescribing, care with continuity.</p>
+        </div>
+        <div>
+          <h4>Practice</h4>
+          <ul>
+            <li><a href="../philosophy.html">Treatment philosophy</a></li>
+            <li><a href="../services.html">Services &amp; conditions</a></li>
+            <li><a href="../fees.html">Fees &amp; policies</a></li>
+            <li><a href="../telehealth.html">How telehealth works</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Patients</h4>
+          <ul>
+            <li><a href="/contact.html#book">Book your free consultation</a></li>
+            <li><a href="../faq.html">FAQ</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../blog/index.html">Writing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:connect@sevenriverspsychiatry.com">connect@sevenriverspsychiatry.com</a></li>
+            <li><a href="tel:+19592594242">(959) 259-4242</a></li>
+            <li>Licensed in Connecticut</li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-crisis"><strong>If you are in crisis:</strong> Seven Rivers Psychiatry is not an emergency service. If you are experiencing a mental health emergency, call or text 988 (Suicide &amp; Crisis Lifeline), call 911, or go to your nearest emergency room.</p>
+      <p class="footer-legal">&copy; 2026 Seven Rivers Psychiatry PLLC. All rights reserved. &middot; <a href="../fees.html#gfe">Good Faith Estimate notice</a> &middot; This website does not provide medical advice and does not create a doctor-patient relationship.</p>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>
