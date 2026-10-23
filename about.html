@@ -19,8 +19,7 @@
       document.documentElement.dataset.path = (p === "healing" || p === "ascent") ? p : "ascent";
     })();
   </script>
-  <!-- Analytics (audit step 9): create a free Plausible account, then uncomment:
-  <script defer data-domain="sevenriverspsychiatry.com" src="https://plausible.io/js/script.js"></script> -->
+  <script defer data-domain="sevenriverspsychiatry.com" src="https://plausible.io/js/script.js"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -37,8 +36,8 @@
     "priceRange": "$300-$1200",
     "currenciesAccepted": "USD",
     "paymentAccepted": "Credit card, HSA, FSA",
-    "areaServed": { "@type": "State", "name": "Connecticut" },
-    "address": { "@type": "PostalAddress", "addressRegion": "CT", "addressCountry": "US" },
+    "areaServed": [ { "@type": "State", "name": "Connecticut" }, { "@type": "AdministrativeArea", "name": "Fairfield County, CT" }, { "@type": "City", "name": "Stamford, CT" } ],
+    "address": { "@type": "PostalAddress", "addressLocality": "Stamford", "addressRegion": "CT", "addressCountry": "US" },
     "founder": { "@id": "https://sevenriverspsychiatry.com/#physician" },
     "availableService": [
       { "@type": "MedicalProcedure", "name": "Comprehensive psychiatric evaluation", "description": "Two 60-minute sessions on separate days." },
@@ -167,7 +166,7 @@
       <div class="footer-grid">
         <div>
           <p class="footer-wordmark">Seven Rivers Psychiatry</p>
-          <p style="font-size:0.95rem; max-width:32ch;">Telehealth psychiatry for adults across Connecticut. Thorough evaluation, thoughtful prescribing, care with continuity.</p>
+          <p style="font-size:0.95rem; max-width:32ch;">Telehealth psychiatry for adults across Connecticut, based in Stamford. Thorough evaluation, thoughtful prescribing, care with continuity.</p>
         </div>
         <div>
           <h4>Practice</h4>
@@ -192,7 +191,7 @@
           <ul>
             <li><a href="mailto:connect@sevenriverspsychiatry.com">connect@sevenriverspsychiatry.com</a></li>
             <li><a href="tel:+19592594242">(959) 259-4242</a></li>
-            <li>Licensed in Connecticut</li>
+            <li>Stamford, Connecticut &middot; Licensed in CT</li>
           </ul>
         </div>
       </div>
